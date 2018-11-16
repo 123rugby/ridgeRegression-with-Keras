@@ -85,6 +85,26 @@ print("R square: %.3f"%r2_score(y,y_hat))           # R^2 (coefficient of determ
 
 
 ######################################
+# xgboost approach
+
+import xgboost as xgb
+
+start = time.time()
+
+#Fitting XGB regressor
+clf = xgb.XGBRegressor()
+log_fit = clf.fit(X,y)
+print(log_fit)
+
+print("%.2f sec."%(time.time() - start), end=' - ')
+
+# Testing
+y_hat = clf.predict(X)
+print("R square: %.3f"%r2_score(y,y_hat))           # R^2 (coefficient of determination) regression score function.
+
+
+
+######################################
 # Keras approach
 
 import keras
