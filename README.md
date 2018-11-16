@@ -4,8 +4,9 @@ Regularised Ridge Regression with Keras
 
 I was trying to perform a ridge regression with python.
 Matrices were:
-X: (32496, 42309)
-y: (32496, 1)
+
+* X: (32496, 42309)
+* y: (32496, 1)
  
 Since, I had to perform ~4000 of them, and optimise everything (i.e. optimise regularisation parameter for every regression) I had to do it pretty quickly.
 With [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html), really useful python library for machine learning, takes a day for every regression.
